@@ -60,36 +60,43 @@ export default function Home() {
   return (
     <main>
       {/* HERO */}
-      <section className="relative min-h-screen overflow-hidden bg-[#055118] pt-20">
+      <section className="relative min-h-screen overflow-hidden bg-[#1100d5] pt-20">
+        {/* Background Media (video with graceful poster/gradient fallback) */}
+        <div className="hero-media absolute inset-0">
+          <video
+            className="h-full w-full object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster="/hero-poster.svg"
+          >
+            <source src="/hero.mp4" type="video/mp4" />
+          </video>
+
+          {/* Light overlay so text stays readable, video stays visible */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60" />
+        </div>
+
         {/* Blue Gradient Glow */}
-        <div className="absolute -right-40 top-20 h-[500px] w-[500px] rounded-full bg-blue-500/20 blur-[120px]" />
+        <div className="absolute -right-40 top-20 h-[500px] w-[500px] rounded-full bg-[#00c2ff]/20 blur-[120px]" />
 
         {/* Green Glow */}
-        <div className="absolute -left-40 bottom-0 h-[400px] w-[400px] rounded-full bg-[#03FC41]/10 blur-[100px]" />
-
-        {/* Grid */}
-        <div
-          className="absolute inset-0 opacity-[0.06]"
-          style={{
-            backgroundImage:
-              "linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px)",
-            backgroundSize: "50px 50px",
-          }}
-        />
+        <div className="absolute -left-40 bottom-0 h-[400px] w-[400px] rounded-full bg-[#00c2ff]/10 blur-[100px]" />
 
         <div className="relative mx-auto grid min-h-[calc(100vh-80px)] max-w-7xl items-center gap-12 px-6 py-20 lg:grid-cols-2 lg:px-8">
           {/* Hero Content */}
           <div>
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#03FC41]/30 bg-[#03FC41]/10 px-4 py-2">
-              <span className="h-2 w-2 rounded-full bg-[#03FC41]" />
-              <span className="text-sm font-medium text-[#03FC41]">
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#00c2ff]/30 bg-[#00c2ff]/10 px-4 py-2">
+              <span className="h-2 w-2 rounded-full bg-[#00c2ff]" />
+              <span className="text-sm font-medium text-[#00c2ff]">
                 Engineering • Automation • Technology
               </span>
             </div>
 
             <h1 className="max-w-4xl text-5xl font-black leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl">
               Where Energy Meets{" "}
-              <span className="text-[#03FC41]">Intelligence</span>
+              <span className="text-[#00c2ff]">Intelligence</span>
             </h1>
 
             <p className="mt-7 max-w-2xl text-lg leading-8 text-white/75">
@@ -101,7 +108,7 @@ export default function Home() {
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
               <a
                 href="/services"
-                className="group inline-flex items-center justify-center gap-2 rounded-full bg-[#03FC41] px-7 py-4 font-bold text-black transition hover:bg-white"
+                className="group inline-flex items-center justify-center gap-2 rounded-full bg-[#00c2ff] px-7 py-4 font-bold text-black transition hover:bg-white"
               >
                 Explore Our Services
                 <ArrowRight
@@ -112,7 +119,7 @@ export default function Home() {
 
               <a
                 href="/contact-us"
-                className="inline-flex items-center justify-center rounded-full border border-white/30 px-7 py-4 font-bold text-white transition hover:border-[#03FC41] hover:text-[#03FC41]"
+                className="inline-flex items-center justify-center rounded-full border border-white/30 px-7 py-4 font-bold text-white transition hover:border-[#00c2ff] hover:text-[#00c2ff]"
               >
                 Contact Us
               </a>
@@ -134,15 +141,15 @@ export default function Home() {
           {/* Hero Visual */}
           <div className="relative hidden lg:block">
             <div className="relative mx-auto aspect-square max-w-[520px]">
-              <div className="absolute inset-10 rounded-full border border-[#03FC41]/20" />
+              <div className="absolute inset-10 rounded-full border border-[#00c2ff]/20" />
               <div className="absolute inset-20 rounded-full border border-blue-400/20" />
 
-              <div className="absolute inset-28 rounded-3xl border border-[#03FC41]/30 bg-black/20 backdrop-blur-md neon-glow">
+              <div className="absolute inset-28 rounded-3xl border border-[#00c2ff]/30 bg-black/20 backdrop-blur-md neon-glow">
                 <div className="flex h-full flex-col items-center justify-center">
                   <Zap
                     size={70}
                     strokeWidth={1.2}
-                    className="text-[#03FC41]"
+                    className="text-[#00c2ff]"
                   />
 
                   <div className="mt-5 text-center">
@@ -158,7 +165,7 @@ export default function Home() {
 
               {/* Floating Cards */}
               <div className="absolute left-0 top-20 rounded-xl border border-white/10 bg-white/10 p-4 backdrop-blur-md">
-                <Cpu className="text-[#03FC41]" />
+                <Cpu className="text-[#00c2ff]" />
                 <p className="mt-2 text-xs font-semibold text-white">
                   PLC Systems
                 </p>
@@ -180,7 +187,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
             <div>
-              <p className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-[#055118]">
+              <p className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-[#1100d5]">
                 Who We Are
               </p>
 
@@ -199,7 +206,7 @@ export default function Home() {
 
               <a
                 href="/about-us"
-                className="mt-6 inline-flex items-center gap-2 font-bold text-[#055118] hover:text-[#0066CC]"
+                className="mt-6 inline-flex items-center gap-2 font-bold text-[#1100d5] hover:text-[#00c2ff]"
               >
                 Discover Voltivo
                 <ArrowRight size={18} />
@@ -213,7 +220,7 @@ export default function Home() {
       <section className="bg-[#f6f8f7] px-6 py-24 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-2xl text-center">
-            <p className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-[#055118]">
+            <p className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-[#1100d5]">
               Our Expertise
             </p>
 
@@ -234,9 +241,9 @@ export default function Home() {
               return (
                 <div
                   key={service.title}
-                  className="group rounded-2xl border border-black/5 bg-white p-7 transition duration-300 hover:-translate-y-1 hover:border-[#03FC41]/50 hover:shadow-xl hover:shadow-[#03FC41]/10"
+                  className="group rounded-2xl border border-black/5 bg-white p-7 transition duration-300 hover:-translate-y-1 hover:border-[#00c2ff]/50 hover:shadow-xl hover:shadow-[#00c2ff]/10"
                 >
-                  <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-[#055118] text-[#03FC41] transition group-hover:bg-[#03FC41] group-hover:text-black">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-[#1100d5] text-[#00c2ff] transition group-hover:bg-[#00c2ff] group-hover:text-black">
                     <Icon size={27} />
                   </div>
 
@@ -250,7 +257,7 @@ export default function Home() {
 
                   <a
                     href="/services"
-                    className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-[#055118] transition group-hover:text-[#0066CC]"
+                    className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-[#1100d5] transition group-hover:text-[#00c2ff]"
                   >
                     Learn More
                     <ArrowRight size={16} />
@@ -265,10 +272,10 @@ export default function Home() {
       {/* ABOUT */}
       <section className="bg-white px-6 py-24 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <div className="overflow-hidden rounded-3xl bg-[#055118]">
+          <div className="overflow-hidden rounded-3xl bg-[#1100d5]">
             <div className="grid lg:grid-cols-2">
               <div className="p-10 sm:p-14 lg:p-16">
-                <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#03FC41]">
+                <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#00c2ff]">
                   About Voltivo
                 </p>
 
@@ -284,7 +291,7 @@ export default function Home() {
 
                 <a
                   href="/about-us"
-                  className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#03FC41] px-6 py-3.5 font-bold text-black transition hover:bg-white"
+                  className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#00c2ff] px-6 py-3.5 font-bold text-black transition hover:bg-white"
                 >
                   About Voltivo
                   <ArrowRight size={18} />
@@ -312,7 +319,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-12 lg:grid-cols-2">
             <div>
-              <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#055118]">
+              <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#1100d5]">
                 Why Voltivo
               </p>
 
@@ -334,7 +341,7 @@ export default function Home() {
                   className="flex items-center gap-4 rounded-xl bg-white p-5 shadow-sm"
                 >
                   <CheckCircle2
-                    className="shrink-0 text-[#055118]"
+                    className="shrink-0 text-[#1100d5]"
                     size={24}
                   />
 
@@ -348,16 +355,16 @@ export default function Home() {
 
       {/* CTA */}
       <section className="relative overflow-hidden bg-black px-6 py-24 lg:px-8">
-        <div className="absolute -right-40 -top-40 h-[450px] w-[450px] rounded-full bg-[#055118] blur-[100px]" />
+        <div className="absolute -right-40 -top-40 h-[450px] w-[450px] rounded-full bg-[#1100d5] blur-[100px]" />
 
         <div className="relative mx-auto max-w-4xl text-center">
-          <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#03FC41]">
+          <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#00c2ff]">
             Start Your Project
           </p>
 
           <h2 className="mt-4 text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl">
             Let's Build Something{" "}
-            <span className="text-[#03FC41]">Smarter.</span>
+            <span className="text-[#00c2ff]">Smarter.</span>
           </h2>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-white/60">
@@ -367,7 +374,7 @@ export default function Home() {
 
           <a
             href="/contact-us"
-            className="mt-9 inline-flex items-center gap-2 rounded-full bg-[#03FC41] px-8 py-4 font-bold text-black transition hover:bg-white"
+            className="mt-9 inline-flex items-center gap-2 rounded-full bg-[#00c2ff] px-8 py-4 font-bold text-black transition hover:bg-white"
           >
             Talk to Our Team
             <ArrowRight size={19} />
@@ -376,7 +383,7 @@ export default function Home() {
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-[#055118] px-6 py-12 lg:px-8">
+      <footer className="bg-[#1100d5] px-6 py-12 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-10 md:grid-cols-4">
             <div className="md:col-span-2">
@@ -384,7 +391,7 @@ export default function Home() {
                 VOLTIVO
               </div>
 
-              <div className="text-[9px] font-semibold tracking-[0.3em] text-[#03FC41]">
+              <div className="text-[9px] font-semibold tracking-[0.3em] text-[#00c2ff]">
                 TECHNOLOGIES
               </div>
 
@@ -399,31 +406,31 @@ export default function Home() {
               <h3 className="font-bold text-white">Quick Links</h3>
 
               <div className="mt-4 space-y-3 text-sm text-white/60">
-                <a href="/" className="block hover:text-[#03FC41]">
+                <a href="/" className="block hover:text-[#00c2ff]">
                   Home
                 </a>
 
                 <a
                   href="/about-us"
-                  className="block hover:text-[#03FC41]"
+                  className="block hover:text-[#00c2ff]"
                 >
                   About Us
                 </a>
 
                 <a
                   href="/services"
-                  className="block hover:text-[#03FC41]"
+                  className="block hover:text-[#00c2ff]"
                 >
                   Services
                 </a>
 
-                <a href="/blog" className="block hover:text-[#03FC41]">
+                <a href="/blog" className="block hover:text-[#00c2ff]">
                   Blog
                 </a>
 
                 <a
                   href="/contact-us"
-                  className="block hover:text-[#03FC41]"
+                  className="block hover:text-[#00c2ff]"
                 >
                   Contact Us
                 </a>

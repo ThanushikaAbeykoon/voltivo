@@ -15,14 +15,14 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="fixed top-0 z-50 w-full border-b border-white/10 bg-[#055118]/95 backdrop-blur-md">
+    <header className="fixed top-0 z-50 w-full border-b border-white/10 bg-[#1100d5]/95 backdrop-blur-md">
       <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-8">
         {/* Logo */}
         <Link href="/" className="group">
           <div className="text-2xl font-black tracking-tight text-white">
             VOLTIVO
           </div>
-          <div className="text-[9px] font-semibold tracking-[0.3em] text-[#03FC41]">
+          <div className="text-[9px] font-semibold tracking-[0.3em] text-[#00c2ff]">
             TECHNOLOGIES
           </div>
         </Link>
@@ -35,8 +35,8 @@ export default function Navbar() {
               href={link.href}
               className={`text-sm font-medium transition ${
                 pathname === link.href
-                  ? "text-[#03FC41]"
-                  : "text-white hover:text-[#03FC41]"
+                  ? "text-[#00c2ff]"
+                  : "text-white hover:text-[#00c2ff]"
               }`}
             >
               {link.label}
@@ -45,7 +45,7 @@ export default function Navbar() {
 
           <Link
             href="/contact-us"
-            className="rounded-full bg-[#03FC41] px-5 py-2.5 text-sm font-bold text-black transition hover:bg-white"
+            className="rounded-full bg-[#00c2ff] px-5 py-2.5 text-sm font-bold text-black transition hover:bg-white"
           >
             Get a Quote
           </Link>

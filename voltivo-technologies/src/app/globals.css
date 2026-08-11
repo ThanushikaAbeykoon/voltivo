@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --voltivo-green: #055118;
-  --voltivo-neon: #03fc41;
+  --voltivo-green: #1100d5;
+  --voltivo-neon: #00c2ff;
   --voltivo-white: #ffffff;
   --voltivo-black: #000000;
 
-  --voltivo-blue-1: #0066ff;
-  --voltivo-blue-2: #00c8ff;
+  --voltivo-blue-1: #1100d5;
+  --voltivo-blue-2: #00c2ff;
 
   --background: #ffffff;
   --foreground: #000000;
@@ -44,11 +44,26 @@ body {
 .green-gradient {
   background: linear-gradient(
     135deg,
-    #055118,
-    #087a25
+    #1100d5,
+    #00c2ff
   );
 }
 
 .neon-glow {
-  box-shadow: 0 0 35px rgba(3, 252, 65, 0.18);
+  box-shadow: 0 0 35px rgba(0, 194, 255, 0.25);
+}
+
+@keyframes hero-media-in {
+  from {
+    opacity: 0;
+    transform: scale(1.06);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.hero-media {
+  animation: hero-media-in 1.6s ease-out forwards;
 }

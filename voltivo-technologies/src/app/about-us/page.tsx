@@ -10,15 +10,15 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <main>
-      <section className="bg-[#055118] px-6 pb-20 pt-40 lg:px-8">
+      <section className="bg-[#1100d5] px-6 pb-20 pt-40 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#03FC41]">
+          <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#00c2ff]">
             About Us
           </p>
 
           <h1 className="mt-4 max-w-4xl text-5xl font-black tracking-tight text-white sm:text-6xl">
             Where Energy Meets{" "}
-            <span className="text-[#03FC41]">Intelligence</span>
+            <span className="text-[#00c2ff]">Intelligence</span>
           </h1>
 
           <p className="mt-6 max-w-2xl text-lg leading-8 text-white/70">
@@ -50,7 +50,7 @@ export default function AboutPage() {
       <section className="bg-[#f6f8f7] px-6 py-24 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-3">
           <div className="rounded-2xl bg-white p-8">
-            <Target className="text-[#055118]" size={38} />
+            <Target className="text-[#1100d5]" size={38} />
 
             <h2 className="mt-6 text-2xl font-bold">Our Mission</h2>
 
@@ -61,7 +61,7 @@ export default function AboutPage() {
           </div>
 
           <div className="rounded-2xl bg-white p-8">
-            <Eye className="text-[#055118]" size={38} />
+            <Eye className="text-[#1100d5]" size={38} />
 
             <h2 className="mt-6 text-2xl font-bold">Our Vision</h2>
 
@@ -72,7 +72,7 @@ export default function AboutPage() {
           </div>
 
           <div className="rounded-2xl bg-white p-8">
-            <Lightbulb className="text-[#055118]" size={38} />
+            <Lightbulb className="text-[#1100d5]" size={38} />
 
             <h2 className="mt-6 text-2xl font-bold">Our Approach</h2>
 
@@ -87,12 +87,12 @@ export default function AboutPage() {
       <section className="bg-black px-6 py-20 text-center">
         <h2 className="text-4xl font-black text-white">
           Ready to build something{" "}
-          <span className="text-[#03FC41]">smarter?</span>
+          <span className="text-[#00c2ff]">smarter?</span>
         </h2>
 
         <Link
           href="/contact-us"
-          className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#03FC41] px-7 py-4 font-bold text-black"
+          className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#00c2ff] px-7 py-4 font-bold text-black"
         >
           Contact Us
           <ArrowRight size={18} />

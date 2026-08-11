@@ -51,15 +51,15 @@ const services = [
 export default function ServicesPage() {
   return (
     <main>
-      <section className="bg-[#055118] px-6 pb-20 pt-40 lg:px-8">
+      <section className="bg-[#1100d5] px-6 pb-20 pt-40 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#03FC41]">
+          <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#00c2ff]">
             Our Services
           </p>
 
           <h1 className="mt-4 max-w-4xl text-5xl font-black text-white sm:text-6xl">
             Technology That{" "}
-            <span className="text-[#03FC41]">Powers Industry</span>
+            <span className="text-[#00c2ff]">Powers Industry</span>
           </h1>
 
           <p className="mt-6 max-w-2xl text-lg leading-8 text-white/70">
@@ -77,9 +77,9 @@ export default function ServicesPage() {
             return (
               <article
                 key={service.title}
-                className="group rounded-2xl border border-black/5 bg-white p-8 transition hover:-translate-y-1 hover:border-[#03FC41] hover:shadow-xl"
+                className="group rounded-2xl border border-black/5 bg-white p-8 transition hover:-translate-y-1 hover:border-[#00c2ff] hover:shadow-xl"
               >
-                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-[#055118] text-[#03FC41] transition group-hover:bg-[#03FC41] group-hover:text-black">
+                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-[#1100d5] text-[#00c2ff] transition group-hover:bg-[#00c2ff] group-hover:text-black">
                   <Icon size={28} />
                 </div>
 
@@ -93,7 +93,7 @@ export default function ServicesPage() {
 
                 <Link
                   href="/contact-us"
-                  className="mt-6 inline-flex items-center gap-2 font-bold text-[#055118]"
+                  className="mt-6 inline-flex items-center gap-2 font-bold text-[#1100d5]"
                 >
                   Discuss Your Project
                   <ArrowRight size={17} />
