@@ -8,6 +8,7 @@ import {
   Factory,
   CheckCircle2,
 } from "lucide-react";
+import TextRotator from "../components/home/TextRotator";
 
 const services = [
   {
@@ -96,7 +97,15 @@ export default function Home() {
 
             <h1 className="max-w-4xl text-5xl font-black leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl">
               Where Energy Meets{" "}
-              <span className="text-[#00c2ff]">Intelligence</span>
+              <TextRotator
+                words={[
+                  "Intelligence",
+                  "Automation",
+                  "Innovation",
+                  "Efficiency",
+                  "Engineering",
+                ]}
+              />
             </h1>
 
             <p className="mt-7 max-w-2xl text-lg leading-8 text-white/75">
@@ -138,47 +147,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Hero Visual */}
-          <div className="relative hidden lg:block">
-            <div className="relative mx-auto aspect-square max-w-[520px]">
-              <div className="absolute inset-10 rounded-full border border-[#00c2ff]/20" />
-              <div className="absolute inset-20 rounded-full border border-blue-400/20" />
-
-              <div className="absolute inset-28 rounded-3xl border border-[#00c2ff]/30 bg-black/20 backdrop-blur-md neon-glow">
-                <div className="flex h-full flex-col items-center justify-center">
-                  <Zap
-                    size={70}
-                    strokeWidth={1.2}
-                    className="text-[#00c2ff]"
-                  />
-
-                  <div className="mt-5 text-center">
-                    <p className="text-xl font-bold text-white">
-                      Smart Engineering
-                    </p>
-                    <p className="mt-2 text-sm text-white/50">
-                      Power • Control • Intelligence
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Floating Cards */}
-              <div className="absolute left-0 top-20 rounded-xl border border-white/10 bg-white/10 p-4 backdrop-blur-md">
-                <Cpu className="text-[#00c2ff]" />
-                <p className="mt-2 text-xs font-semibold text-white">
-                  PLC Systems
-                </p>
-              </div>
-
-              <div className="absolute bottom-20 right-0 rounded-xl border border-white/10 bg-white/10 p-4 backdrop-blur-md">
-                <Radio className="text-cyan-300" />
-                <p className="mt-2 text-xs font-semibold text-white">
-                  Industrial IoT
-                </p>
-              </div>
-            </div>
-          </div>
+        
         </div>
       </section>
 
