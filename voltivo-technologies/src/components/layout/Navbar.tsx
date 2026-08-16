@@ -42,9 +42,9 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="group transition-transform duration-300 hover:scale-[1.02] flex items-center">
           <img
-            src="/logo.png"
+            src="/logo.svg"
             alt="VOLTIVO Technologies"
-            className={`w-auto object-contain transition-all duration-300 ${
+            className={`w-auto object-contain transition-all duration-300 logo-glow ${
               scrolled ? "h-11" : "h-14"
             }`}
           />
@@ -135,9 +135,9 @@ export default function Navbar() {
                 <div className="flex items-center justify-between border-b border-white/10 pb-6 mb-8 mt-12">
                   <Link href="/" onClick={() => setIsMenuOpen(false)} className="transition-opacity hover:opacity-90 flex items-center">
                     <img
-                      src="/logo.png"
+                      src="/logo.svg"
                       alt="VOLTIVO Technologies"
-                      className="h-12 w-auto object-contain"
+                      className="h-12 w-auto object-contain logo-glow"
                     />
                   </Link>
 
