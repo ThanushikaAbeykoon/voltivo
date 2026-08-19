@@ -1,5 +1,6 @@
 import { ArrowRight, Clock } from "lucide-react";
 import Link from "next/link";
+import PageHero from "../../components/layout/PageHero";
 
 export const metadata = {
   title: "Blog & Insights | Voltivo Technologies",
@@ -38,37 +39,28 @@ const blogPosts = [
 
 export default function BlogPage() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-[#04011d] via-[#f3f7f9] to-[#dff6fc] pt-32 pb-24">
-      {/* Background patterns */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000003_1px,transparent_1px),linear-gradient(to_bottom,#00000003_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
-      <div className="absolute top-[20%] right-[-10%] w-[500px] h-[500px] rounded-full bg-[#00c2ff]/10 blur-[130px] pointer-events-none" />
-      <div className="absolute bottom-[20%] left-[-10%] w-[500px] h-[500px] rounded-full bg-[#1100d5]/5 blur-[120px] pointer-events-none" />
-
-      <div className="relative mx-auto w-full max-w-7xl px-6 lg:px-8 z-10">
-        <div className="max-w-2xl mb-16">
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#1100d5]/15 bg-[#1100d5]/5 px-4 py-1.5 animate-fade-in">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#1100d5]" />
-            <span className="text-xs font-bold uppercase tracking-[0.15em] text-[#1100d5]">
-              Insights & News
-            </span>
-          </div>
-          <h1 className="text-4xl font-black tracking-tight text-slate-900 sm:text-5xl lg:text-6xl leading-[1.1]">
+    <main>
+      <PageHero
+        eyebrow="Insights & News"
+        title={
+          <>
             Where Tech Meets{" "}
-            <span className="bg-gradient-to-r from-[#1100d5] to-[#00c2ff] bg-clip-text text-transparent">
-              Industry Expertise
-            </span>
-          </h1>
-          <p className="mt-6 text-lg text-slate-600 leading-relaxed font-medium">
-            Stay up to date with the latest innovations, guides, and engineering updates from the Voltivo Technologies team.
-          </p>
-        </div>
+            <span className="text-[#00c2ff]">Industry Expertise</span>
+          </>
+        }
+        description="Stay up to date with the latest innovations, guides, and engineering updates from the Voltivo Technologies team."
+      />
 
-        {/* Featured Post / Grid */}
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      {/* BLOG GRID */}
+      <section className="relative overflow-hidden bg-gradient-to-b from-[#f8fafc] via-white to-[#f1f5f9] px-6 py-24 lg:px-8">
+        <div className="absolute top-[20%] right-[-10%] w-[500px] h-[500px] rounded-full bg-[#00c2ff]/10 blur-[130px] pointer-events-none" />
+        <div className="absolute bottom-[20%] left-[-10%] w-[500px] h-[500px] rounded-full bg-[#1100d5]/5 blur-[120px] pointer-events-none" />
+
+        <div className="relative mx-auto max-w-7xl z-10 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {blogPosts.map((post) => (
             <article
               key={post.id}
-              className="flex flex-col justify-between overflow-hidden rounded-3xl border border-white/60 bg-white/45 backdrop-blur-xl shadow-xl shadow-slate-100/50 hover:shadow-2xl hover:shadow-[#1100d5]/10 hover:border-[#00c2ff]/30 hover:-translate-y-2 transition-all duration-305"
+              className="flex flex-col justify-between overflow-hidden rounded-3xl border border-white/60 bg-white/45 backdrop-blur-xl shadow-xl shadow-slate-100/50 hover:shadow-2xl hover:shadow-[#1100d5]/10 hover:border-[#00c2ff]/30 hover:-translate-y-2 transition-all duration-500"
             >
               <div>
                 <div className="relative h-56 w-full overflow-hidden">
@@ -114,7 +106,7 @@ export default function BlogPage() {
             </article>
           ))}
         </div>
-      </div>
+      </section>
     </main>
   );
 }

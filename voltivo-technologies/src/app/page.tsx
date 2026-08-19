@@ -61,11 +61,11 @@ export default function Home() {
   return (
     <main>
       {/* HERO */}
-      <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-[#04011d] via-[#f3f7f9] to-[#dff6fc] pt-20 flex items-center justify-center">
+      <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-[#04011d] via-[#0d013d] to-[#1100d5] pt-20 flex items-center justify-center">
         {/* Background Media (video with graceful poster/gradient fallback) */}
         <div className="hero-media absolute inset-0">
           <video
-            className="h-full w-full object-cover opacity-12 mix-blend-multiply"
+            className="h-full w-full object-cover opacity-20 mix-blend-luminosity"
             autoPlay
             muted
             loop
@@ -75,8 +75,8 @@ export default function Home() {
             <source src="/hero.mp4" type="video/mp4" />
           </video>
 
-          {/* Mixed overlay adjusting light/dark transparency */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[#04011d]/90 via-transparent to-[#dff6fc]/30" />
+          {/* Mixed overlay keeping the dark brand tone consistent */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[#04011d]/90 via-transparent to-[#04011d]/60" />
         </div>
 
         {/* Premium cyber grid pattern overlay - slightly darker for visibility on light bg */}
