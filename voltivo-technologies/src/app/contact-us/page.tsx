@@ -68,8 +68,8 @@ export default async function ContactPage({ searchParams }: Props) {
                   </div>
                   <div>
                     <h3 className="text-xs font-bold uppercase tracking-wider text-slate-500">Call Us</h3>
-                    <a href="tel:+94771234567" className="mt-1 block font-bold text-slate-800 hover:text-[#1100d5] transition-colors">
-                      +94 77 123 4567
+                    <a href="tel:+94760711638" className="mt-1 block font-bold text-slate-800 hover:text-[#1100d5] transition-colors">
+                      +94 76 071 1638
                     </a>
                   </div>
                 </div>
