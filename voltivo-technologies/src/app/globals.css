@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --voltivo-green: #1100d5;
-  --voltivo-neon: #00c2ff;
+  --voltivo-green: #1d4ed8;
+  --voltivo-neon: #22c55e;
   --voltivo-white: #ffffff;
   --voltivo-black: #000000;
 
-  --voltivo-blue-1: #1100d5;
-  --voltivo-blue-2: #00c2ff;
+  --voltivo-blue-1: #1d4ed8;
+  --voltivo-blue-2: #22c55e;
 
   --background: #ffffff;
   --foreground: #000000;
@@ -44,13 +44,13 @@ body {
 .green-gradient {
   background: linear-gradient(
     135deg,
-    #1100d5,
-    #00c2ff
+    #1d4ed8,
+    #22c55e
   );
 }
 
 .neon-glow {
-  box-shadow: 0 0 35px rgba(0, 194, 255, 0.25);
+  box-shadow: 0 0 35px rgba(34,197,94, 0.25);
 }
 
 @keyframes hero-media-in {
@@ -69,12 +69,12 @@ body {
 }
 
 .logo-glow {
-  filter: drop-shadow(0 0 8px rgba(0, 194, 255, 0.4));
+  filter: drop-shadow(0 0 8px rgba(34,197,94, 0.4));
   transition: filter 0.3s ease, transform 0.3s ease;
 }
 
 .group:hover .logo-glow {
-  filter: drop-shadow(0 0 16px rgba(0, 194, 255, 0.85));
+  filter: drop-shadow(0 0 16px rgba(34,197,94, 0.85));
 }
 
 @keyframes slideIn {
@@ -86,4 +86,25 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+/* Flyer-style blue → green accent text (e.g. "SOLUTIONS.") */
+.text-brand-gradient {
+  background: linear-gradient(90deg, #2b7bf6 0%, #14b8a6 55%, #22c55e 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Brighter variant for text sitting on the dark hero video */
+.text-brand-gradient-light {
+  background: linear-gradient(90deg, #60a5fa 0%, #2dd4bf 55%, #4ade80 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: none; /* inherited text-shadow would show through the transparent fill */
+  filter: drop-shadow(0 2px 10px rgba(10, 31, 77, 0.6));
+}
+
+.hero-text-shadow {
+  text-shadow: 0 2px 18px rgba(10, 31, 77, 0.65);
 }

@@ -26,7 +26,7 @@ export default function TextRotator({ words }: TextRotatorProps) {
           animate={{ y: "0%", opacity: 1 }}
           exit={{ y: "-80%", opacity: 0 }}
           transition={{ duration: 0.5, ease: [0.215, 0.61, 0.355, 1] }}
-          className="inline-block text-[#00c2ff]"
+          className="inline-block text-brand-gradient-light"
         >
           {words[index]}
         </motion.span>

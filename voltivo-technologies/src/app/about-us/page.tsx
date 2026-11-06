@@ -34,7 +34,7 @@ export default function AboutPage() {
         title={
           <>
             Where Energy Meets{" "}
-            <span className="text-[#00c2ff]">Intelligence</span>
+            <span className="text-brand-gradient">Intelligence</span>
           </>
         }
         description="Engineering intelligent technology solutions for modern businesses and industries."
@@ -42,20 +42,20 @@ export default function AboutPage() {
 
       {/* ABOUT */}
       <section className="relative overflow-hidden bg-white px-6 py-24 lg:px-8">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-[#00c2ff]/5 blur-[120px] pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-[#22c55e]/5 blur-[120px] pointer-events-none" />
 
         <div className="mx-auto max-w-4xl relative z-10">
           <div className="rounded-3xl border border-white/80 bg-gradient-to-r from-white/60 to-slate-50/40 p-8 sm:p-12 md:p-16 backdrop-blur-md shadow-xl shadow-slate-200/20">
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#1100d5]/15 bg-[#1100d5]/5 px-4 py-1.5">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#1100d5]" />
-              <span className="text-xs font-bold uppercase tracking-[0.15em] text-[#1100d5]">
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#1d4ed8]/15 bg-[#1d4ed8]/5 px-4 py-1.5">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#1d4ed8]" />
+              <span className="text-xs font-bold uppercase tracking-[0.15em] text-[#1d4ed8]">
                 Who We Are
               </span>
             </div>
 
             <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-black">
               About{" "}
-              <span className="bg-gradient-to-r from-[#1100d5] to-[#00c2ff] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#1d4ed8] to-[#22c55e] bg-clip-text text-transparent">
                 Voltivo Technologies
               </span>
             </h2>
@@ -78,8 +78,8 @@ export default function AboutPage() {
 
       {/* MISSION / VISION / APPROACH */}
       <section className="relative overflow-hidden bg-gradient-to-b from-[#f8fafc] via-white to-[#f1f5f9] px-6 py-24 lg:px-8">
-        <div className="absolute top-[20%] right-[-10%] w-[400px] h-[400px] rounded-full bg-[#00c2ff]/5 blur-[120px] pointer-events-none" />
-        <div className="absolute bottom-[20%] left-[-10%] w-[400px] h-[400px] rounded-full bg-[#1100d5]/5 blur-[120px] pointer-events-none" />
+        <div className="absolute top-[20%] right-[-10%] w-[400px] h-[400px] rounded-full bg-[#22c55e]/5 blur-[120px] pointer-events-none" />
+        <div className="absolute bottom-[20%] left-[-10%] w-[400px] h-[400px] rounded-full bg-[#1d4ed8]/5 blur-[120px] pointer-events-none" />
 
         <div className="mx-auto max-w-7xl relative z-10 grid gap-6 md:grid-cols-3">
           {pillars.map((pillar) => {
@@ -88,12 +88,12 @@ export default function AboutPage() {
             return (
               <div
                 key={pillar.title}
-                className="group relative rounded-3xl border border-white/60 bg-gradient-to-br from-white/65 to-white/35 p-8 backdrop-blur-xl shadow-xl shadow-slate-100/50 hover:shadow-2xl hover:shadow-[#1412db]/20 hover:-translate-y-2 hover:border-transparent transition-all duration-500 overflow-hidden"
+                className="group relative rounded-3xl border border-white/60 bg-gradient-to-br from-white/65 to-white/35 p-8 backdrop-blur-xl shadow-xl shadow-slate-100/50 hover:shadow-2xl hover:shadow-[#1e40af]/20 hover:-translate-y-2 hover:border-transparent transition-all duration-500 overflow-hidden"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-[#1412db] via-[#247cfd] to-[#1100d5] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#1e40af] via-[#2563eb] to-[#1d4ed8] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
                 <div className="relative z-10">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#1100d5] to-[#00a2d5] text-white shadow-lg shadow-[#1100d5]/10 group-hover:from-white group-hover:to-white group-hover:text-[#1100d5] group-hover:shadow-[0_0_15px_rgba(255,255,255,0.45)] transition-all duration-300">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#1d4ed8] to-[#16a34a] text-white shadow-lg shadow-[#1d4ed8]/10 group-hover:from-white group-hover:to-white group-hover:text-[#1d4ed8] group-hover:shadow-[0_0_15px_rgba(255,255,255,0.45)] transition-all duration-300">
                     <Icon size={26} />
                   </div>
 
@@ -113,21 +113,21 @@ export default function AboutPage() {
 
       {/* CTA */}
       <section className="relative overflow-hidden bg-black px-6 py-24 lg:px-8">
-        <div className="absolute -right-40 -top-40 h-[450px] w-[450px] rounded-full bg-[#1100d5] blur-[100px]" />
+        <div className="absolute -right-40 -top-40 h-[450px] w-[450px] rounded-full bg-[#1d4ed8] blur-[100px]" />
 
         <div className="relative mx-auto max-w-4xl text-center">
-          <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#00c2ff]">
+          <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#22c55e]">
             Start Your Project
           </p>
 
           <h2 className="mt-4 text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl">
             Ready to Build Something{" "}
-            <span className="text-[#00c2ff]">Smarter?</span>
+            <span className="text-brand-gradient">Smarter?</span>
           </h2>
 
           <Link
             href="/contact-us"
-            className="mt-9 inline-flex items-center gap-2 rounded-full bg-[#00c2ff] px-8 py-4 font-bold text-black transition hover:bg-white"
+            className="mt-9 inline-flex items-center gap-2 rounded-full bg-[#22c55e] px-8 py-4 font-bold text-black transition hover:bg-white"
           >
             Contact Us
             <ArrowRight size={19} />

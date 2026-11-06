@@ -6,6 +6,9 @@ export const metadata = {
   description: "Get in touch with Voltivo Technologies for industrial automation, electrical, PLC, IoT, electronics and IT requirements.",
 };
 
+const CONTACT_EMAIL = "info@voltivotech.com";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://voltivotech.com";
+
 type Props = {
   searchParams: Promise<{ success?: string }>;
 };
@@ -20,7 +23,7 @@ export default async function ContactPage({ searchParams }: Props) {
         title={
           <>
             Let&apos;s Build Something{" "}
-            <span className="text-[#00c2ff]">Smarter.</span>
+            <span className="text-brand-gradient">Smarter.</span>
           </>
         }
         description="Have an industrial automation project, IoT requirement, or need customized control systems? Get in touch with our engineering team today."
@@ -28,55 +31,55 @@ export default async function ContactPage({ searchParams }: Props) {
 
       {/* CONTACT INFO + FORM */}
       <section className="relative overflow-hidden bg-gradient-to-b from-[#f8fafc] via-white to-[#f1f5f9] px-6 py-24 lg:px-8">
-        <div className="absolute top-[20%] left-[-10%] w-[500px] h-[500px] rounded-full bg-[#1100d5]/5 blur-[120px] pointer-events-none" />
-        <div className="absolute bottom-[20%] right-[-10%] w-[500px] h-[500px] rounded-full bg-[#00c2ff]/10 blur-[130px] pointer-events-none" />
+        <div className="absolute top-[20%] left-[-10%] w-[500px] h-[500px] rounded-full bg-[#1d4ed8]/5 blur-[120px] pointer-events-none" />
+        <div className="absolute bottom-[20%] right-[-10%] w-[500px] h-[500px] rounded-full bg-[#22c55e]/10 blur-[130px] pointer-events-none" />
 
         <div className="relative mx-auto max-w-7xl z-10">
           <div className="grid gap-12 lg:grid-cols-12 lg:items-start">
             {/* Left Column: Info */}
             <div className="lg:col-span-5">
-              <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#1100d5]/15 bg-[#1100d5]/5 px-4 py-1.5">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#1100d5]" />
-                <span className="text-xs font-bold uppercase tracking-[0.15em] text-[#1100d5]">
+              <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#1d4ed8]/15 bg-[#1d4ed8]/5 px-4 py-1.5">
+                <span className="h-1.5 w-1.5 rounded-full bg-[#1d4ed8]" />
+                <span className="text-xs font-bold uppercase tracking-[0.15em] text-[#1d4ed8]">
                   Contact Details
                 </span>
               </div>
 
               <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-slate-900">
                 We&apos;d Love to Hear{" "}
-                <span className="bg-gradient-to-r from-[#1100d5] to-[#00c2ff] bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-[#1d4ed8] to-[#22c55e] bg-clip-text text-transparent">
                   From You
                 </span>
               </h2>
 
               <div className="mt-10 space-y-6">
                 <div className="flex gap-4 rounded-3xl border border-white/60 bg-white/40 p-5 backdrop-blur-xl shadow-lg shadow-slate-100/50">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#1100d5] text-[#00c2ff]">
-                    <Mail size={22} className="text-[#00c2ff]" />
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#1d4ed8] text-[#22c55e]">
+                    <Mail size={22} className="text-[#22c55e]" />
                   </div>
                   <div>
                     <h3 className="text-xs font-bold uppercase tracking-wider text-slate-500">Email Us</h3>
-                    <a href="mailto:info@voltivo.tech" className="mt-1 block font-bold text-slate-800 hover:text-[#1100d5] transition-colors">
-                      info@voltivo.tech
+                    <a href="mailto:info@voltivotech.com" className="mt-1 block font-bold text-slate-800 hover:text-[#1d4ed8] transition-colors">
+                      info@voltivotech.com
                     </a>
                   </div>
                 </div>
 
                 <div className="flex gap-4 rounded-3xl border border-white/60 bg-white/40 p-5 backdrop-blur-xl shadow-lg shadow-slate-100/50">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#1100d5] text-[#00c2ff]">
-                    <Phone size={22} className="text-[#00c2ff]" />
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#1d4ed8] text-[#22c55e]">
+                    <Phone size={22} className="text-[#22c55e]" />
                   </div>
                   <div>
                     <h3 className="text-xs font-bold uppercase tracking-wider text-slate-500">Call Us</h3>
-                    <a href="tel:+94760711638" className="mt-1 block font-bold text-slate-800 hover:text-[#1100d5] transition-colors">
-                      +94 76 071 1638
+                    <a href="tel:+94740935752" className="mt-1 block font-bold text-slate-800 hover:text-[#1d4ed8] transition-colors">
+                      +94 74 093 5752
                     </a>
                   </div>
                 </div>
 
                 <div className="flex gap-4 rounded-3xl border border-white/60 bg-white/40 p-5 backdrop-blur-xl shadow-lg shadow-slate-100/50">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#1100d5] text-[#00c2ff]">
-                    <Clock size={22} className="text-[#00c2ff]" />
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#1d4ed8] text-[#22c55e]">
+                    <Clock size={22} className="text-[#22c55e]" />
                   </div>
                   <div>
                     <h3 className="text-xs font-bold uppercase tracking-wider text-slate-500">Office Hours</h3>
@@ -104,7 +107,7 @@ export default async function ContactPage({ searchParams }: Props) {
                     </p>
                     <a
                       href="/contact-us"
-                      className="mt-8 inline-flex items-center gap-2 rounded-xl bg-[#1100d5] px-6 py-3 font-bold text-white hover:bg-[#00c2ff] hover:text-black transition-all duration-300"
+                      className="mt-8 inline-flex items-center gap-2 rounded-xl bg-[#1d4ed8] px-6 py-3 font-bold text-white hover:bg-[#22c55e] hover:text-black transition-all duration-300"
                     >
                       Send another message
                     </a>
@@ -113,7 +116,14 @@ export default async function ContactPage({ searchParams }: Props) {
                   <>
                     <h2 className="text-2xl font-black text-slate-900 mb-6">Send us a Message</h2>
 
-                    <form action="/contact-us?success=true" method="POST" className="space-y-6">
+                    {/* Submissions are delivered to info@voltivotech.com via FormSubmit (formsubmit.co) */}
+                    <form action={`https://formsubmit.co/${CONTACT_EMAIL}`} method="POST" className="space-y-6">
+                      <input type="hidden" name="_subject" value="New inquiry from voltivotech.com" />
+                      <input type="hidden" name="_template" value="table" />
+                      <input type="hidden" name="_next" value={`${SITE_URL}/contact-us?success=true`} />
+                      {/* Honeypot: bots fill this, humans never see it */}
+                      <input type="text" name="_honey" className="hidden" tabIndex={-1} autoComplete="off" />
+
                       <div className="grid gap-6 sm:grid-cols-2">
                         <div className="flex flex-col gap-2">
                           <label htmlFor="name" className="text-xs font-bold uppercase text-slate-500">Your Name</label>
@@ -122,7 +132,7 @@ export default async function ContactPage({ searchParams }: Props) {
                             id="name"
                             name="name"
                             placeholder="John Doe"
-                            className="rounded-xl border border-slate-200 bg-white px-4 py-3 text-slate-900 placeholder:text-slate-400 focus:border-[#1100d5] focus:outline-none focus:ring-1 focus:ring-[#1100d5] transition-all"
+                            className="rounded-xl border border-slate-200 bg-white px-4 py-3 text-slate-900 placeholder:text-slate-400 focus:border-[#1d4ed8] focus:outline-none focus:ring-1 focus:ring-[#1d4ed8] transition-all"
                             required
                           />
                         </div>
@@ -134,7 +144,7 @@ export default async function ContactPage({ searchParams }: Props) {
                             id="email"
                             name="email"
                             placeholder="john@company.com"
-                            className="rounded-xl border border-slate-200 bg-white px-4 py-3 text-slate-900 placeholder:text-slate-400 focus:border-[#1100d5] focus:outline-none focus:ring-1 focus:ring-[#1100d5] transition-all"
+                            className="rounded-xl border border-slate-200 bg-white px-4 py-3 text-slate-900 placeholder:text-slate-400 focus:border-[#1d4ed8] focus:outline-none focus:ring-1 focus:ring-[#1d4ed8] transition-all"
                             required
                           />
                         </div>
@@ -147,7 +157,7 @@ export default async function ContactPage({ searchParams }: Props) {
                           id="subject"
                           name="subject"
                           placeholder="Project Inquiry / General Question"
-                          className="rounded-xl border border-slate-200 bg-white px-4 py-3 text-slate-900 placeholder:text-slate-400 focus:border-[#1100d5] focus:outline-none focus:ring-1 focus:ring-[#1100d5] transition-all"
+                          className="rounded-xl border border-slate-200 bg-white px-4 py-3 text-slate-900 placeholder:text-slate-400 focus:border-[#1d4ed8] focus:outline-none focus:ring-1 focus:ring-[#1d4ed8] transition-all"
                           required
                         />
                       </div>
@@ -159,14 +169,14 @@ export default async function ContactPage({ searchParams }: Props) {
                           name="message"
                           rows={5}
                           placeholder="Tell us about your project requirements, scope, timeline..."
-                          className="rounded-xl border border-slate-200 bg-white px-4 py-3 text-slate-900 placeholder:text-slate-400 focus:border-[#1100d5] focus:outline-none focus:ring-1 focus:ring-[#1100d5] transition-all resize-none"
+                          className="rounded-xl border border-slate-200 bg-white px-4 py-3 text-slate-900 placeholder:text-slate-400 focus:border-[#1d4ed8] focus:outline-none focus:ring-1 focus:ring-[#1d4ed8] transition-all resize-none"
                           required
                         />
                       </div>
 
                       <button
                         type="submit"
-                        className="group inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#1100d5] hover:bg-[#00c2ff] py-4 font-bold text-white hover:text-black shadow-lg shadow-[#1100d5]/10 hover:shadow-xl hover:shadow-[#00c2ff]/20 transition-all duration-300 hover:scale-[1.01]"
+                        className="group inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#1d4ed8] hover:bg-[#22c55e] py-4 font-bold text-white hover:text-black shadow-lg shadow-[#1d4ed8]/10 hover:shadow-xl hover:shadow-[#22c55e]/20 transition-all duration-300 hover:scale-[1.01]"
                       >
                         Send Message
                         <Send size={16} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-0.5" />

@@ -10,7 +10,7 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about-us", label: "About Us" },
   { href: "/services", label: "Services" },
-  { href: "/blog", label: "Blog" },
+  // { href: "/blog", label: "Blog" },
   { href: "/contact-us", label: "Contact Us" },
 ];
 
@@ -30,7 +30,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 z-50 w-full transition-all duration-300 ${
         scrolled
-          ? "border-b border-white/5 bg-[#0a0080]/80 backdrop-blur-lg shadow-lg shadow-black/10"
+          ? "border-b border-white/5 bg-[#1e3a8a]/80 backdrop-blur-lg shadow-lg shadow-black/10"
           : "border-b border-transparent bg-transparent"
       }`}
     >
@@ -69,7 +69,7 @@ export default function Navbar() {
                   {isActive && (
                     <motion.div
                       layoutId="activeNavBackground"
-                      className="absolute inset-0 rounded-full bg-[#00c2ff]"
+                      className="absolute inset-0 rounded-full bg-[#22c55e]"
                       transition={{ type: "spring", stiffness: 380, damping: 30 }}
                     />
                   )}
@@ -80,7 +80,7 @@ export default function Navbar() {
 
           <Link
             href="/contact-us"
-            className="group relative overflow-hidden rounded-full bg-gradient-to-r from-[#00c2ff] to-[#0099cc] px-6 py-2.5 text-sm font-bold text-black shadow-[0_0_15px_rgba(0,194,255,0.25)] transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_0_25px_rgba(0,194,255,0.55)]"
+            className="group relative overflow-hidden rounded-full bg-gradient-to-r from-[#22c55e] to-[#15803d] px-6 py-2.5 text-sm font-bold text-black shadow-[0_0_15px_rgba(34,197,94,0.25)] transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_0_25px_rgba(34,197,94,0.55)]"
           >
             <span className="relative z-10">Get a Quote</span>
             <span className="absolute inset-0 -translate-x-full bg-white/20 transition-transform duration-300 group-hover:translate-x-0" />
@@ -129,7 +129,7 @@ export default function Navbar() {
                 animate={{ x: 0 }}
                 exit={{ x: "100%" }}
                 transition={{ type: "spring", damping: 25, stiffness: 220 }}
-                className="fixed right-0 top-0 bottom-0 z-45 flex w-full max-w-xs flex-col bg-[#07005e]/95 p-8 shadow-2xl backdrop-blur-xl border-l border-white/10 md:hidden"
+                className="fixed right-0 top-0 bottom-0 z-45 flex w-full max-w-xs flex-col bg-[#13317a]/95 p-8 shadow-2xl backdrop-blur-xl border-l border-white/10 md:hidden"
               >
                 {/* Header inside drawer */}
                 <div className="flex items-center justify-between border-b border-white/10 pb-6 mb-8 mt-12">
@@ -165,7 +165,7 @@ export default function Navbar() {
                           onClick={() => setIsMenuOpen(false)}
                           className={`text-lg font-semibold tracking-wide block transition ${
                             isActive
-                              ? "text-[#00c2ff]"
+                              ? "text-[#22c55e]"
                               : "text-white/80 hover:text-white"
                           }`}
                         >
@@ -181,7 +181,7 @@ export default function Navbar() {
                   <Link
                     href="/contact-us"
                     onClick={() => setIsMenuOpen(false)}
-                    className="flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#00c2ff] to-[#0099cc] py-4 text-center text-sm font-bold text-black shadow-lg shadow-[#00c2ff]/20 transition duration-300 hover:opacity-90 active:scale-95"
+                    className="flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#22c55e] to-[#15803d] py-4 text-center text-sm font-bold text-black shadow-lg shadow-[#22c55e]/20 transition duration-300 hover:opacity-90 active:scale-95"
                   >
                     Get a Quote
                     <ArrowRight size={16} />

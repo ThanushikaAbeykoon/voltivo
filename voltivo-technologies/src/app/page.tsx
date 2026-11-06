@@ -61,11 +61,11 @@ export default function Home() {
   return (
     <main>
       {/* HERO */}
-      <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-[#04011d] via-[#0d013d] to-[#1100d5] pt-20 flex items-center justify-center">
+      <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-[#0a1f4d] via-[#0f2a66] to-[#1d4ed8] pt-20 flex items-center justify-center">
         {/* Background Media (video with graceful poster/gradient fallback) */}
         <div className="hero-media absolute inset-0">
           <video
-            className="h-full w-full object-cover opacity-20 mix-blend-luminosity"
+            className="h-full w-full object-cover"
             autoPlay
             muted
             loop
@@ -75,28 +75,23 @@ export default function Home() {
             <source src="/hero.mp4" type="video/mp4" />
           </video>
 
-          {/* Mixed overlay keeping the dark brand tone consistent */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[#04011d]/90 via-transparent to-[#04011d]/60" />
+          {/* Light navy layer: strong behind the text (left), fading out so the video stays visible on the right */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0a1f4d]/85 via-[#0a1f4d]/55 to-[#0a1f4d]/10" />
+          {/* Subtle top/bottom fade for the navbar and section edge */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0a1f4d]/50 via-transparent to-[#0a1f4d]/40" />
         </div>
 
-        {/* Premium cyber grid pattern overlay - slightly darker for visibility on light bg */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000004_1px,transparent_1px),linear-gradient(to_bottom,#00000004_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_40%,#000_80%,transparent_100%)] pointer-events-none" />
-
-        {/* Soft Glowing Mesh Blobs */}
-        <div className="absolute -right-20 top-[20%] h-[600px] w-[600px] rounded-full bg-[#00c2ff]/20 blur-[130px] animate-pulse [animation-duration:8s] pointer-events-none" />
-        <div className="absolute -left-30 bottom-10 h-[500px] w-[500px] rounded-full bg-[#1100d5]/10 blur-[120px] animate-pulse [animation-duration:12s] pointer-events-none" />
-
         <div className="relative mx-auto w-full max-w-7xl px-6 py-20 lg:px-8 z-10">
-          {/* Glass Card Container */}
-          <div className="max-w-2xl rounded-3xl border border-white/20 bg-gradient-to-br from-white/10 to-black/35 p-8 sm:p-12 backdrop-blur-xl shadow-2xl shadow-black/15">
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#00c2ff]/30 bg-[#00c2ff]/10 px-4 py-2">
-              <span className="h-2 w-2 rounded-full bg-[#00c2ff]" />
-              <span className="text-sm font-medium text-[#00c2ff]">
+          {/* Hero Content */}
+          <div className="max-w-2xl">
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#4ade80]/40 bg-[#0a1f4d]/60 px-4 py-2 backdrop-blur-md">
+              <span className="h-2 w-2 rounded-full bg-[#4ade80]" />
+              <span className="text-sm font-semibold text-[#4ade80]">
                 Engineering • Automation • Technology
               </span>
             </div>
 
-            <h1 className="max-w-4xl text-4xl font-black leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl">
+            <h1 className="max-w-4xl text-4xl font-black leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl hero-text-shadow">
               Where Energy Meets{" "}
               <TextRotator
                 words={[
@@ -109,7 +104,7 @@ export default function Home() {
               />
             </h1>
 
-            <p className="mt-7 max-w-2xl text-base leading-7 text-white/80">
+            <p className="mt-7 max-w-2xl text-base leading-7 text-white/90 hero-text-shadow">
               Voltivo Technologies delivers intelligent solutions across
               industrial automation, electrical systems, PLC, IoT, electronics,
               and IT.
@@ -118,7 +113,7 @@ export default function Home() {
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
               <a
                 href="/services"
-                className="group inline-flex items-center justify-center gap-2 rounded-full bg-[#00c2ff] px-6 py-3.5 font-bold text-black transition hover:bg-white"
+                className="group inline-flex items-center justify-center gap-2 rounded-full bg-[#22c55e] px-6 py-3.5 font-bold text-black transition hover:bg-white"
               >
                 Explore Our Services
                 <ArrowRight
@@ -129,13 +124,13 @@ export default function Home() {
 
               <a
                 href="/contact-us"
-                className="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3.5 font-bold text-white transition hover:border-[#00c2ff] hover:text-[#00c2ff]"
+                className="inline-flex items-center justify-center rounded-full border border-white/40 bg-white/10 px-6 py-3.5 font-bold text-white backdrop-blur-md transition hover:border-[#4ade80] hover:text-[#4ade80]"
               >
                 Contact Us
               </a>
             </div>
 
-            <div className="mt-10 flex flex-wrap gap-x-6 gap-y-3 text-xs text-white/50">
+            <div className="mt-10 flex flex-wrap gap-x-6 gap-y-3 text-xs font-medium text-white/75 hero-text-shadow">
               <span>Industrial Automation</span>
               <span>•</span>
               <span>PLC</span>
@@ -153,23 +148,23 @@ export default function Home() {
       {/* INTRODUCTION */}
       <section className="relative overflow-hidden bg-white px-6 py-24 lg:px-8">
         {/* Soft Decorative Ambient Background */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-[#00c2ff]/5 blur-[120px] pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-[#22c55e]/5 blur-[120px] pointer-events-none" />
 
         <div className="mx-auto max-w-7xl relative z-10">
           <div className="rounded-3xl border border-white/80 bg-gradient-to-r from-white/60 to-slate-50/40 p-8 sm:p-12 md:p-16 backdrop-blur-md shadow-xl shadow-slate-200/20 hover:shadow-2xl hover:shadow-slate-300/30 transition-all duration-500">
             <div className="grid gap-12 lg:grid-cols-12 lg:items-center">
               {/* Left Column - Heading */}
               <div className="lg:col-span-7">
-                <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#1100d5]/15 bg-[#1100d5]/5 px-4 py-1.5">
-                  <span className="h-1.5 w-1.5 rounded-full bg-[#1100d5]" />
-                  <span className="text-xs font-bold uppercase tracking-[0.15em] text-[#1100d5]">
+                <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#1d4ed8]/15 bg-[#1d4ed8]/5 px-4 py-1.5">
+                  <span className="h-1.5 w-1.5 rounded-full bg-[#1d4ed8]" />
+                  <span className="text-xs font-bold uppercase tracking-[0.15em] text-[#1d4ed8]">
                     Who We Are
                   </span>
                 </div>
 
                 <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight leading-[1.08] text-black">
                   Engineering Smarter{" "}
-                  <span className="bg-gradient-to-r from-[#1100d5] to-[#00c2ff] bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-[#1d4ed8] to-[#22c55e] bg-clip-text text-transparent">
                     Solutions
                   </span>{" "}
                   for a Connected Future
@@ -188,7 +183,7 @@ export default function Home() {
                 <div className="mt-8">
                   <a
                     href="/about-us"
-                    className="inline-flex items-center gap-2 border border-[#1100d5]/20 hover:border-[#1100d5] bg-white hover:bg-[#1100d5]/5 px-6 py-3 rounded-full font-bold text-[#1100d5] transition duration-300"
+                    className="inline-flex items-center gap-2 border border-[#1d4ed8]/20 hover:border-[#1d4ed8] bg-white hover:bg-[#1d4ed8]/5 px-6 py-3 rounded-full font-bold text-[#1d4ed8] transition duration-300"
                   >
                     Discover Voltivo
                     <ArrowRight size={18} />
@@ -203,21 +198,21 @@ export default function Home() {
       {/* SERVICES */}
       <section className="relative overflow-hidden bg-gradient-to-b from-[#f8fafc] via-white to-[#f1f5f9] px-6 py-24 lg:px-8">
         {/* Soft Ambient Background Highlights */}
-        <div className="absolute top-[20%] right-[-10%] w-[400px] h-[400px] rounded-full bg-[#00c2ff]/5 blur-[120px] pointer-events-none" />
-        <div className="absolute bottom-[20%] left-[-10%] w-[400px] h-[400px] rounded-full bg-[#1100d5]/5 blur-[120px] pointer-events-none" />
+        <div className="absolute top-[20%] right-[-10%] w-[400px] h-[400px] rounded-full bg-[#22c55e]/5 blur-[120px] pointer-events-none" />
+        <div className="absolute bottom-[20%] left-[-10%] w-[400px] h-[400px] rounded-full bg-[#1d4ed8]/5 blur-[120px] pointer-events-none" />
 
         <div className="mx-auto max-w-7xl relative z-10">
           <div className="mx-auto max-w-2xl text-center">
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#1100d5]/15 bg-[#1100d5]/5 px-4 py-1.5 justify-center">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#1100d5]" />
-              <span className="text-xs font-bold uppercase tracking-[0.15em] text-[#1100d5]">
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#1d4ed8]/15 bg-[#1d4ed8]/5 px-4 py-1.5 justify-center">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#1d4ed8]" />
+              <span className="text-xs font-bold uppercase tracking-[0.15em] text-[#1d4ed8]">
                 Our Expertise
               </span>
             </div>
 
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight leading-tight text-slate-900">
               Technology That Powers{" "}
-              <span className="bg-gradient-to-r from-[#1100d5] to-[#00c2ff] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#1d4ed8] to-[#22c55e] bg-clip-text text-transparent">
                 Industry
               </span>
             </h2>
@@ -235,16 +230,16 @@ export default function Home() {
               return (
                 <div
                   key={service.title}
-                  className="group relative rounded-3xl border border-white/60 bg-gradient-to-br from-white/65 to-white/35 p-8 backdrop-blur-xl shadow-xl shadow-slate-100/50 hover:shadow-2xl hover:shadow-[#1412db]/20 hover:-translate-y-2 hover:border-transparent transition-all duration-500 flex flex-col justify-between overflow-hidden"
+                  className="group relative rounded-3xl border border-white/60 bg-gradient-to-br from-white/65 to-white/35 p-8 backdrop-blur-xl shadow-xl shadow-slate-100/50 hover:shadow-2xl hover:shadow-[#1e40af]/20 hover:-translate-y-2 hover:border-transparent transition-all duration-500 flex flex-col justify-between overflow-hidden"
                 >
                   {/* Hover Gradient Overlay Layer */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#1412db] via-[#247cfd] to-[#1100d5] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#1e40af] via-[#2563eb] to-[#1d4ed8] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
                   {/* Card Content Wrapper */}
                   <div className="relative z-10 flex flex-col justify-between h-full">
                     <div>
                       {/* Glassy Floating Icon representation */}
-                      <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#1100d5] to-[#00a2d5] text-white shadow-lg shadow-[#1100d5]/10 group-hover:from-white group-hover:to-white group-hover:text-[#1100d5] group-hover:shadow-[0_0_15px_rgba(255,255,255,0.45)] transition-all duration-300">
+                      <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#1d4ed8] to-[#16a34a] text-white shadow-lg shadow-[#1d4ed8]/10 group-hover:from-white group-hover:to-white group-hover:text-[#1d4ed8] group-hover:shadow-[0_0_15px_rgba(255,255,255,0.45)] transition-all duration-300">
                         <Icon size={26} />
                       </div>
 
@@ -259,7 +254,7 @@ export default function Home() {
 
                     <a
                       href="/services"
-                      className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-[#1100d5] group-hover:text-white transition-colors duration-300"
+                      className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-[#1d4ed8] group-hover:text-white transition-colors duration-300"
                     >
                       Learn More
                       <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
@@ -275,16 +270,16 @@ export default function Home() {
       {/* ABOUT */}
       <section className="relative overflow-hidden bg-gradient-to-b from-[#f1f5f9] to-[#ffffff] px-6 py-24 lg:px-8">
         {/* Soft Decorative Ambient Background */}
-        <div className="absolute top-[30%] left-[-10%] w-[500px] h-[500px] rounded-full bg-[#00c2ff]/5 blur-[120px] pointer-events-none" />
+        <div className="absolute top-[30%] left-[-10%] w-[500px] h-[500px] rounded-full bg-[#22c55e]/5 blur-[120px] pointer-events-none" />
 
         <div className="mx-auto max-w-7xl relative z-10">
           <div className="overflow-hidden rounded-3xl border border-white/60 shadow-2xl shadow-slate-200/30 bg-white/45 backdrop-blur-xl">
             <div className="grid lg:grid-cols-2">
               {/* Left Column - Deep Midnight Navy glassy block */}
-              <div className="bg-gradient-to-br from-[#04011d] via-[#05002b] to-[#0d013d] p-10 sm:p-14 lg:p-16 flex flex-col justify-center">
-                <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#00c2ff]/20 bg-[#00c2ff]/5 px-4 py-1.5 w-fit">
-                  <span className="h-1.5 w-1.5 rounded-full bg-[#00c2ff]" />
-                  <span className="text-xs font-bold uppercase tracking-[0.15em] text-[#00c2ff]">
+              <div className="bg-gradient-to-br from-[#0a1f4d] via-[#0b2152] to-[#0f2a66] p-10 sm:p-14 lg:p-16 flex flex-col justify-center">
+                <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#22c55e]/20 bg-[#22c55e]/5 px-4 py-1.5 w-fit">
+                  <span className="h-1.5 w-1.5 rounded-full bg-[#22c55e]" />
+                  <span className="text-xs font-bold uppercase tracking-[0.15em] text-[#22c55e]">
                     About Voltivo
                   </span>
                 </div>
@@ -302,7 +297,7 @@ export default function Home() {
                 <div className="mt-8">
                   <a
                     href="/about-us"
-                    className="inline-flex items-center gap-2 rounded-full bg-[#00c2ff] hover:bg-[#00d5ff] px-6 py-3.5 font-bold text-black transition-all duration-300 hover:scale-[1.03]"
+                    className="inline-flex items-center gap-2 rounded-full bg-[#22c55e] hover:bg-[#4ade80] px-6 py-3.5 font-bold text-black transition-all duration-300 hover:scale-[1.03]"
                   >
                     About Voltivo
                     <ArrowRight size={18} />
@@ -318,7 +313,7 @@ export default function Home() {
                   className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 {/* Glass screen tint overlay */}
-                <div className="absolute inset-0 bg-gradient-to-tr from-[#1100d5]/20 via-transparent to-[#00c2ff]/15 mix-blend-overlay pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-tr from-[#1d4ed8]/20 via-transparent to-[#22c55e]/15 mix-blend-overlay pointer-events-none" />
                 <div className="absolute inset-0 bg-black/10 pointer-events-none" />
 
               </div>
@@ -330,15 +325,15 @@ export default function Home() {
       {/* WHY VOLTIVO */}
       <section className="relative overflow-hidden bg-gradient-to-b from-white via-[#f8fafc] to-white px-6 py-24 lg:px-8">
         {/* Soft Decorative Ambient Background */}
-        <div className="absolute top-[20%] right-[-10%] w-[350px] h-[350px] rounded-full bg-[#00c2ff]/5 blur-[100px] pointer-events-none" />
-        <div className="absolute bottom-[20%] left-[-10%] w-[350px] h-[350px] rounded-full bg-[#1100d5]/5 blur-[100px] pointer-events-none" />
+        <div className="absolute top-[20%] right-[-10%] w-[350px] h-[350px] rounded-full bg-[#22c55e]/5 blur-[100px] pointer-events-none" />
+        <div className="absolute bottom-[20%] left-[-10%] w-[350px] h-[350px] rounded-full bg-[#1d4ed8]/5 blur-[100px] pointer-events-none" />
 
         <div className="mx-auto max-w-7xl relative z-10">
           <div className="grid gap-12 lg:grid-cols-2">
             <div>
-              <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#1100d5]/15 bg-[#1100d5]/5 px-4 py-1.5 w-fit">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#1100d5]" />
-                <span className="text-xs font-bold uppercase tracking-[0.15em] text-[#1100d5]">
+              <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#1d4ed8]/15 bg-[#1d4ed8]/5 px-4 py-1.5 w-fit">
+                <span className="h-1.5 w-1.5 rounded-full bg-[#1d4ed8]" />
+                <span className="text-xs font-bold uppercase tracking-[0.15em] text-[#1d4ed8]">
                   Why Voltivo
                 </span>
               </div>
@@ -359,14 +354,14 @@ export default function Home() {
                 <div
                   key={reason}
                   style={{ animationDelay: `${idx * 150}ms` }}
-                  className="group flex items-center gap-4 rounded-2xl border border-white/60 bg-white/45 p-5 backdrop-blur-xl shadow-lg shadow-slate-100/50 hover:shadow-2xl hover:shadow-[#00c2ff]/10 hover:border-[#00c2ff]/30 hover:bg-gradient-to-r hover:from-white/80 hover:to-[#e0f8ff]/30 hover:-translate-y-1 transition-all duration-300 select-none animate-[slideIn_0.6s_ease-out_both]"
+                  className="group flex items-center gap-4 rounded-2xl border border-white/60 bg-white/45 p-5 backdrop-blur-xl shadow-lg shadow-slate-100/50 hover:shadow-2xl hover:shadow-[#22c55e]/10 hover:border-[#22c55e]/30 hover:bg-gradient-to-r hover:from-white/80 hover:to-[#e8f9ef]/30 hover:-translate-y-1 transition-all duration-300 select-none animate-[slideIn_0.6s_ease-out_both]"
                 >
                   <CheckCircle2
-                    className="shrink-0 text-[#1100d5] group-hover:text-[#00c2ff] group-hover:scale-110 group-hover:rotate-[360deg] transition-all duration-500"
+                    className="shrink-0 text-[#1d4ed8] group-hover:text-[#22c55e] group-hover:scale-110 group-hover:rotate-[360deg] transition-all duration-500"
                     size={24}
                   />
 
-                  <span className="font-semibold text-slate-800 group-hover:text-[#1100d5] transition-colors duration-300">{reason}</span>
+                  <span className="font-semibold text-slate-800 group-hover:text-[#1d4ed8] transition-colors duration-300">{reason}</span>
                 </div>
               ))}
             </div>
@@ -376,16 +371,16 @@ export default function Home() {
 
       {/* CTA */}
       <section className="relative overflow-hidden bg-black px-6 py-24 lg:px-8">
-        <div className="absolute -right-40 -top-40 h-[450px] w-[450px] rounded-full bg-[#1100d5] blur-[100px]" />
+        <div className="absolute -right-40 -top-40 h-[450px] w-[450px] rounded-full bg-[#1d4ed8] blur-[100px]" />
 
         <div className="relative mx-auto max-w-4xl text-center">
-          <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#00c2ff]">
+          <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#22c55e]">
             Start Your Project
           </p>
 
           <h2 className="mt-4 text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl">
             Let's Build Something{" "}
-            <span className="text-[#00c2ff]">Smarter.</span>
+            <span className="text-brand-gradient">Smarter.</span>
           </h2>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-white/60">
@@ -395,7 +390,7 @@ export default function Home() {
 
           <a
             href="/contact-us"
-            className="mt-9 inline-flex items-center gap-2 rounded-full bg-[#00c2ff] px-8 py-4 font-bold text-black transition hover:bg-white"
+            className="mt-9 inline-flex items-center gap-2 rounded-full bg-[#22c55e] px-8 py-4 font-bold text-black transition hover:bg-white"
           >
             Talk to Our Team
             <ArrowRight size={19} />

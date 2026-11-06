@@ -45,7 +45,7 @@ export default function BlogPage() {
         title={
           <>
             Where Tech Meets{" "}
-            <span className="text-[#00c2ff]">Industry Expertise</span>
+            <span className="text-brand-gradient">Industry Expertise</span>
           </>
         }
         description="Stay up to date with the latest innovations, guides, and engineering updates from the Voltivo Technologies team."
@@ -53,14 +53,14 @@ export default function BlogPage() {
 
       {/* BLOG GRID */}
       <section className="relative overflow-hidden bg-gradient-to-b from-[#f8fafc] via-white to-[#f1f5f9] px-6 py-24 lg:px-8">
-        <div className="absolute top-[20%] right-[-10%] w-[500px] h-[500px] rounded-full bg-[#00c2ff]/10 blur-[130px] pointer-events-none" />
-        <div className="absolute bottom-[20%] left-[-10%] w-[500px] h-[500px] rounded-full bg-[#1100d5]/5 blur-[120px] pointer-events-none" />
+        <div className="absolute top-[20%] right-[-10%] w-[500px] h-[500px] rounded-full bg-[#22c55e]/10 blur-[130px] pointer-events-none" />
+        <div className="absolute bottom-[20%] left-[-10%] w-[500px] h-[500px] rounded-full bg-[#1d4ed8]/5 blur-[120px] pointer-events-none" />
 
         <div className="relative mx-auto max-w-7xl z-10 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {blogPosts.map((post) => (
             <article
               key={post.id}
-              className="flex flex-col justify-between overflow-hidden rounded-3xl border border-white/60 bg-white/45 backdrop-blur-xl shadow-xl shadow-slate-100/50 hover:shadow-2xl hover:shadow-[#1100d5]/10 hover:border-[#00c2ff]/30 hover:-translate-y-2 transition-all duration-500"
+              className="flex flex-col justify-between overflow-hidden rounded-3xl border border-white/60 bg-white/45 backdrop-blur-xl shadow-xl shadow-slate-100/50 hover:shadow-2xl hover:shadow-[#1d4ed8]/10 hover:border-[#22c55e]/30 hover:-translate-y-2 transition-all duration-500"
             >
               <div>
                 <div className="relative h-56 w-full overflow-hidden">
@@ -69,7 +69,7 @@ export default function BlogPage() {
                     alt={post.title}
                     className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
                   />
-                  <div className="absolute left-6 top-6 rounded-full bg-[#1100d5] px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">
+                  <div className="absolute left-6 top-6 rounded-full bg-[#1d4ed8] px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">
                     {post.category}
                   </div>
                 </div>
@@ -84,7 +84,7 @@ export default function BlogPage() {
                     <span>{post.date}</span>
                   </div>
 
-                  <h2 className="text-xl font-bold leading-snug text-slate-900 hover:text-[#1100d5] transition-colors duration-200">
+                  <h2 className="text-xl font-bold leading-snug text-slate-900 hover:text-[#1d4ed8] transition-colors duration-200">
                     {post.title}
                   </h2>
 
@@ -97,7 +97,7 @@ export default function BlogPage() {
               <div className="p-8 pt-0 mt-auto">
                 <Link
                   href="/contact-us"
-                  className="inline-flex items-center gap-2 text-sm font-bold text-[#1100d5] hover:text-[#00c2ff] transition-colors duration-200"
+                  className="inline-flex items-center gap-2 text-sm font-bold text-[#1d4ed8] hover:text-[#22c55e] transition-colors duration-200"
                 >
                   Read Full Article
                   <ArrowRight size={16} />
