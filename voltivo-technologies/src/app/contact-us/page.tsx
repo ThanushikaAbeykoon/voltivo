@@ -6,15 +6,12 @@ export const metadata = {
   description: "Get in touch with Voltivo Technologies for industrial automation, electrical, PLC, IoT, electronics and IT requirements.",
 };
 
-const CONTACT_EMAIL = "info@voltivotech.com";
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://voltivotech.com";
-
 type Props = {
-  searchParams: Promise<{ success?: string }>;
+  searchParams: Promise<{ success?: string; error?: string }>;
 };
 
 export default async function ContactPage({ searchParams }: Props) {
-  const { success } = await searchParams;
+  const { success, error } = await searchParams;
 
   return (
     <main>
@@ -116,13 +113,16 @@ export default async function ContactPage({ searchParams }: Props) {
                   <>
                     <h2 className="text-2xl font-black text-slate-900 mb-6">Send us a Message</h2>
 
-                    {/* Submissions are delivered to info@voltivotech.com via FormSubmit (formsubmit.co) */}
-                    <form action={`https://formsubmit.co/${CONTACT_EMAIL}`} method="POST" className="space-y-6">
-                      <input type="hidden" name="_subject" value="New inquiry from voltivotech.com" />
-                      <input type="hidden" name="_template" value="table" />
-                      <input type="hidden" name="_next" value={`${SITE_URL}/contact-us?success=true`} />
+                    {/* Submissions are sent through Gmail SMTP using an app password configured in the server environment. */}
+                    <form action="/api/contact" method="POST" className="space-y-6">
                       {/* Honeypot: bots fill this, humans never see it */}
                       <input type="text" name="_honey" className="hidden" tabIndex={-1} autoComplete="off" />
+
+                      {error ? (
+                        <div className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-medium text-red-700">
+                          {error}
+                        </div>
+                      ) : null}
 
                       <div className="grid gap-6 sm:grid-cols-2">
                         <div className="flex flex-col gap-2">
